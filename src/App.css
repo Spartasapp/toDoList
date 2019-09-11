@@ -1,10 +1,20 @@
 .App {
   display: flex;
   flex-direction: row;
+  background-color:  #282c34;
 }
-
+.general {
+  background-color: #282C34;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.todoList-newTaskForm{
+  margin: 10px;
+}
 .todoList {
   width: 300px;
+  
 }
 
 .todoList > div {
@@ -12,7 +22,8 @@
 }
 
 .todoList-task {
-
+  width: 500px;
+  display: flex;
 }
 
 .todoList-task.done {
@@ -25,4 +36,14 @@
 
 .error {
   border-color: red;
+}
+.todolistStyle{
+  width: 500px;
+  background-color:  #282c34;
+  border: 2px solid white;
+  margin: 10px;
+}
+.button {
+position: absolute;
+left: 300px;
 }

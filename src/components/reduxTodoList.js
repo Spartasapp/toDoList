@@ -63,7 +63,7 @@ class ReduxTodoList extends React.Component {
                 
 
                 let newTasks = this.props.tasks.map(t => {
-                    if (t.id != taskId) {
+                    if (t.id !== taskId) {
                         return t;
                     } else {
                         return newTask;
@@ -78,7 +78,7 @@ class ReduxTodoList extends React.Component {
             })
     }
     deleteTask = (taskId)=>{
-        todolistAPI.deleteTask(taskId)
+        todolistAPI.deleteTasks(taskId)
         .then( res =>{
             debugger
             this.props.deleteTask(taskId)
@@ -100,7 +100,7 @@ class ReduxTodoList extends React.Component {
     render = () => {
         
         return (
-            <div>
+            <div className='todolistStyle'>
                 <ReduxTodoListView deleteTask={this.deleteTask} deleteTodolist={this.deleteTodolist} {...this.props} 
                 addTask={this.addTask}
                 state={this.state} changeStatus={this.changeStatus} changeTitle={this.changeTitle}/>

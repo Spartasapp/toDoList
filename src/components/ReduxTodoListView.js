@@ -19,10 +19,10 @@ const ReduxTodoListView = (props)=>{
     </div>
 
     {props.state.isFetching
-        ? <img src={preloader}/>
+        ? <img src={preloader} alt=''/>
         : <TodoListTasks deleteTask={props.deleteTask} changeStatus={props.changeStatus}
                          changeTitle={props.changeTitle}
-                         tasks={props.tasks.filter(t => {
+                         tasks={props.tasks.filter(t => { 
                              
                              if (props.state.filterValue === "All") {
                                  return true;

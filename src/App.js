@@ -51,14 +51,14 @@ class App extends React.Component {
             .map(tl => <TodoList id={tl.id} title={tl.title}/>)
 
         return (
-            <>
+            <div className="App">
                 <div>
                    <AddNewItemForm addItem={this.addTodoList}/>
                 </div>
-                <div className="App">
+                <div >
                     { this.state.isFetching ? <img src={preloader} /> : todolists}
                 </div>
-            </>
+            </div>
         );
     }
 }

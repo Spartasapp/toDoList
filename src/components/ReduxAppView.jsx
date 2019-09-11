@@ -5,7 +5,7 @@ import ReduxTodoList from './reduxTodoList'
 
 
 const ReduxAppView = (props)=>{
-    return <div>
+    return <div className="general">
     <AddNewItemForm addItem={props.addTodoList} />
     {props
         .todolists
